@@ -1,0 +1,12 @@
+{% block title %} 
+<title>Home page</title>
+{% endblock %}
+
+{% block body %}
+{% if name %}
+<h1 class="text-uppercase text-danger">Welcome to the Home page {{name}}</h1>
+{% else %}
+<h1>Welcome to the Homepage without a name</h1>
+<a href="#">Hello</a>
+{% endif %}
+{% endblock %}
