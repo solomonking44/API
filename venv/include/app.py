@@ -9,13 +9,17 @@ api = Api(app)
 class Doctor(Resource):
     def get(self):
         return JSON_FILE
+    
+    def post(self, category):
+        
 
 api.add_resource(Doctor, "/doctor")
+api.add_resource(Doctor, "/specialty")
 
 f = open('json2.json')
 
 JSON_FILE = json.load(f)
-
+ 
 
 #redirecting function incase of 404   
 @app.errorhandler(404)
