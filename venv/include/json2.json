@@ -1,0 +1,44 @@
+{
+    "patients": [
+        {
+        "name": "John Doe",
+        "dob": "1940-03-19",
+        "ssn": "234-23-525",
+        "address": "Kabale",
+        "phone": "8770586755",
+        "email": "johndoe@gmail.com"
+    },
+    {
+        "name": "Matovu Constantine",
+        "dob": "1987-03-19",
+        "ssn": "233-13-225",
+        "address": "California",
+        "phone": "8770586755",
+        "email": "matovu@gmail.com"
+    },
+    {
+        "name": "Magezi Nasser",
+        "dob": "1922-03-19",
+        "ssn": "224-83-525",
+        "address": "Kampala",
+        "phone": "8770586758",
+        "email": "magezi@gmail.com"
+    },
+    {
+        "name": "Roy williams",
+        "dob": "1935-03-19",
+        "ssn": "237-23-555",
+        "address": "Kampala",
+        "phone": "8770545755",
+        "email": "roy@gmail.com"
+    },
+    {
+        "name": "Sula kadoji",
+        "dob": "1999-03-9",
+        "ssn": "232-63-225",
+        "address": "Kampala",
+        "phone": "87707598755",
+        "email": "sula@gmail.com"
+    }
+]
+}

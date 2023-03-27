@@ -1,31 +1,22 @@
-# from flask import Flask, request, render_template
-from flask import Flask, request
+from flask import Flask, request, render_template
+from flask_restful import Api, Resource
+import json
 
 #app declaration
 app = Flask(__name__)
+api = Api(app)
 
-with app.test_request_context('/hello', method='GET'):
-    assert request.path == '/hello'
-    assert request.method == 'GET'
+class Doctor(Resource):
+    def get(self):
+        return JSON_FILE
+
+api.add_resource(Doctor, "/doctor")
+
+f = open('json2.json')
+
+JSON_FILE = json.load(f)
 
 
-
-# #login function
-# def do_the_login():
-#     return render_template('index.html', name="harry")
-
-# #redirect function
-# def show_the_login_form():
-#     return "This is the login page"
-
-# #routing function
-# @app.route('/login', methods=['GET', 'POST'])
-# def login():
-#     if request.method == 'POST':
-#         return do_the_login()
-#     else:
-#         return show_the_login_form()
-    
 #redirecting function incase of 404   
 @app.errorhandler(404)
 def page_not_found(error):
