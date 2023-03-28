@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 <!-- title -->
 {% block title %}
 <title>Home page</title>
@@ -6,25 +6,28 @@
 
 <!-- body -->
 {% block body %}
-<div class="container-fluid">
-    <a href="#">Hello</a>
-    <form action="http://localhost:5000/doctor" method="POST">
-        <div class="input-group">
-            <label for="username">
-                Username
-            </label>
-            <input type="text" name="username" id="username" class="form-control">
-        </div>
-        <div class="input-group">
-            <label for="password">
-                Password
-            </label>
-            <input type="password" name="password" id="password" class="form-control">
-        </div>
-        <button type="submit" class="btn btn-primary">
-            Submit
-        </button>
-    </form>
-</div>
 
+<h1>Welcome to our pages 
+{% if message %}
+{{message}}
+{% endif %}
+
+</h1>
+<form method="POST" name="login_form" action="http://localhost:5000/login">
+    <div class="input-group">
+        <label for="username">
+            Username
+        </label>
+        <input type="text" name="username" id="username" class="form-control">
+    </div>
+    <div class="input-group">
+        <label for="password">
+            Password
+        </label>
+        <input type="password" name="password" id="password" class="form-control">
+    </div>
+    <button type="submit" class="form-control btn btn-primary">
+        Submit
+    </button>
+</form>
 {% endblock %}
