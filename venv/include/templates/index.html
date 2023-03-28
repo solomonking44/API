@@ -1,12 +1,30 @@
-{% block title %} 
+{% extends 'base.html' %}
+<!-- title -->
+{% block title %}
 <title>Home page</title>
 {% endblock %}
 
+<!-- body -->
 {% block body %}
-{% if name %}
-<h1 class="text-uppercase text-danger">Welcome to the Home page {{name}}</h1>
-{% else %}
-<h1>Welcome to the Homepage without a name</h1>
-<a href="#">Hello</a>
-{% endif %}
+<div class="container-fluid">
+    <a href="#">Hello</a>
+    <form action="http://localhost:5000/doctor" method="POST">
+        <div class="input-group">
+            <label for="username">
+                Username
+            </label>
+            <input type="text" name="username" id="username" class="form-control">
+        </div>
+        <div class="input-group">
+            <label for="password">
+                Password
+            </label>
+            <input type="password" name="password" id="password" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary">
+            Submit
+        </button>
+    </form>
+</div>
+
 {% endblock %}
